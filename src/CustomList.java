@@ -153,6 +153,12 @@ public class CustomList {
         }
     }
 
+    public void swap(int firstIndex, int lastIndex) {
+        int tmp = this.list[firstIndex];
+        this.list[firstIndex] = this.list[lastIndex];
+        this.list[lastIndex] = tmp;
+    }
+
     public void reverse () {
       for (int i = 0; i < this.list.length /2; i++) {
           System.out.println(this.list[i] + " " + this.list[this.list.length - 1 - i]);
