@@ -36,7 +36,11 @@ public class Main {
  //       System.out.println(customList.toString());
   //      customList.shiftByIndex(2);
 
-        customList.removeAllByIndex(-3);
+ //       customList.removeAllByIndex(-3);
+ //       System.out.println(customList.toString());
+  //      customList.reverse();
+        System.out.println(customList.toString());
+        customList.selectionSort();
         System.out.println(customList.toString());
 
 
