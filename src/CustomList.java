@@ -162,19 +162,15 @@ public class CustomList {
     public void reverse () {
       for (int i = 0; i < this.list.length /2; i++) {
           System.out.println(this.list[i] + " " + this.list[this.list.length - 1 - i]);
-          int tmp = this.list[i];
-          this.list[i] = this.list[this.list.length - 1 - i];
-          this.list[this.list.length - 1 - i] = tmp;
-        }
+          swap(i, this.list.length - 1 - i);
+          }
     }
 
     public void bubbleSort() {
         for (int i = 0; i < this.list.length; i++) {
             for (int j = 0; j < this.list.length - i - 1; j++){
                if (this.list[j] > this.list[j + 1]) {
-                   int tmp = this.list[j];
-                   this.list[j] = this.list[j + 1];
-                   this.list[j + 1] = tmp;
+                   swap(j, j + 1);
                }
             }
         }
@@ -192,10 +188,8 @@ public class CustomList {
                      index = j;
                  }
                                   }
-            int tmp = this.list[index];
-            this.list[index] = this.list[this.list.length - i -1];
-            this.list[this.list.length - i -1] = tmp;
-             }
+            swap(index, this.list.length - i -1);
+            }
         }
 }
 
