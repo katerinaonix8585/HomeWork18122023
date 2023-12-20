@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-          CustomList customList = new CustomList(new int[]{5, 1, 2, 7, 5, 7, 8, 9, 3});
+          CustomList customList = new CustomList(new int[]{5, 1, 2, 7, 15, 7, 8, 19, 3});
 //        System.out.println(customList.toString());
 //
 //        System.out.println(customList.IndexOf(1));
@@ -40,8 +40,10 @@ public class Main {
  //       System.out.println(customList.toString());
   //      customList.reverse();
         System.out.println(customList.toString());
-        customList.selectionSort();
+        customList.selectionSort(true);
         System.out.println(customList.toString());
+      //  customList.selectionSort(false);
+      //  System.out.println(customList.toString());
 
 
 
