@@ -166,44 +166,35 @@ public class CustomList {
           }
     }
 
+    public void bubbleSort() {
+        bubbleSort(true);
+    }
+
     public void bubbleSort(boolean desc) {
         for (int i = 0; i < this.list.length; i++) {
             for (int j = 0; j < this.list.length - i - 1; j++) {
-                if (desc) {
-                    if (this.list[j] < this.list[j + 1]) {
+                if (this.list[j] < this.list[j + 1] != desc) {
                         swap(j + 1, j);
-                    }
-                }else {
-                    if (this.list[j] > this.list[j + 1]) {
-                        swap(j, j + 1);
-                        }
                     }
                 }
             }
-        }
-
-
+    }
 
 
     public void selectionSort(boolean desc) {
         for (int i = 0; i < this.list.length; i++) {
-            int value = this.list[0];
-            int index = 0;
+            int target = this.list[0];
+            int targetIndex = 0;
             for (int j = 0; j < this.list.length - i; j++){
-                if (desc) {
-                   if (this.list[j] > value) {
-                     value = this.list[j];
-                     index = j;}
-                   } else {
-                       if (this.list[j] < value) {
-                           value = this.list[j];
-                           index = j;
-                       }
-                   }
+                if (target < this.list[j] == desc) {
+                   target = this.list[j];
+                   targetIndex = j;
                 }
-                swap(index, this.list.length - 1 - i);
+                }
+            swap(targetIndex, this.list.length - 1 - i);                }
+
             }
         }
-}
+
 
 
